@@ -1,4 +1,4 @@
-# Lezioni
+# Programmazione I
 Repository contenente gli esercizi svolti a lezione di Programmazione
 
 ## Regole:

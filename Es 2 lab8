@@ -1,0 +1,53 @@
+#include<stdio.h>
+#define D 5
+int main(){
+    char matrix[D][D];
+    int line,col,k,t,u;
+    int main=0;
+    int c1=0,c2=0;
+
+//Insert the matrix
+
+    for(line=0; line<D; line++)
+        for(col=0; col<D; col++)
+            scanf(" %c",&matrix[line][col]);
+        
+//Check the main character
+
+    for(line=0; line<D; line++){
+        for(col=0; col<D; col++){
+            c2=c1;
+            c1=0;
+            for(k=0; k<D; k++){
+                if(matrix[line][col]==matrix[line][k] && (col!=k)){
+                    c1++;
+                }
+            }
+            for(t=0; t<D; t++){
+                for(u=0; u<D; u++){
+                    if(matrix[line][col]==matrix[t][u] && (line!=t)){
+                        c1++;
+                    }
+                }
+            }
+            if(c1>c2){
+                main=matrix[line][col];
+            }
+        }
+    }
+    printf("The main character is: %c.\n",main);
+
+//Print the matrix with an * instead of the main character
+
+    for(line=0; line<D; line++){
+        for(col=0; col<D; col++){
+            if(matrix[line][col]!=main){
+                printf(" %c",matrix[line][col]);
+            }else{
+                printf(" *");
+            }    
+        }
+        printf("\n");
+    }
+
+}

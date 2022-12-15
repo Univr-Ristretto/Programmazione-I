@@ -11,7 +11,7 @@ int main() {
      {2, 2, 6, 6, 0, 1}};
 
     int array[n];
-    int value[n];
+    int value[n/2];
     int index1 = 0;
     int index2 = 0;
     int number = 0;
@@ -26,7 +26,7 @@ int main() {
         }
     }
 
-    for(int e = 0; e < n / 2; e++){
+    for(int e = 0; e < n ; e++){
         number = array[e];
         for(int c = 0; c < n / 2; c++){
             if(number == value[c]){
